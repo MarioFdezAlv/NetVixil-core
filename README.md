@@ -62,7 +62,7 @@ Open mobile/main.qml with Qt Creator or QML runtime
 
 ### Agent (Free & Pro)
 
-python agent_service.py
+    python agent_service.py
 
     Configure AGENT_ID, TOKEN, API_URL in config.json
 
