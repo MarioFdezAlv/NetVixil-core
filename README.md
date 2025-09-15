@@ -51,6 +51,7 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 python main.py
+```
 
 ### Mobile App
 
@@ -64,7 +65,6 @@ python agent_service.py
 
     Run as a service for automatic monitoring
 
-
 Contributing
 
     Free version is open source (desktop and agents only)
@@ -76,4 +76,7 @@ License
     Free version: MIT
 
     Pro version: Proprietary
+
+```
+
 ```
