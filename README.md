@@ -76,7 +76,3 @@ License
     Free version: MIT
 
     Pro version: Proprietary
-
-```
-
-```
