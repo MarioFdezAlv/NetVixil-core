@@ -6,7 +6,7 @@
 
 **NetVixil** is a powerful network monitoring and security application for personal and professional use. Scan, monitor, and analyze your networks in real-time with detailed device insights.
 
-> ⚠️ **Note:** The backend is centralized and managed by NetVixil. Users cannot host their own backend. Only the desktop, mobile, and agent apps are open source for personal use.
+> ⚠️ **Note:** The backend is centralized and managed by NetVixil. Users cannot host their own backend. All users, Free or Pro, need an account to access their agents and monitor networks. Only the desktop, mobile, and agent apps for Free users are open source.
 
 ---
 
@@ -14,28 +14,31 @@
 
 ### Free (Personal) Version
 
+- User account registration and login
 - Scan your network: IP, MAC, hostname, manufacturer
 - Device status: online/offline and uptime
 - Detailed info: open ports, active services, OS
 - Real-time alerts for new devices or disconnections
 - Network mapping and logs
-- Automated remote monitoring agents (RPi/PC)
+- Configure and run remote monitoring agents (RPi/PC) linked to your account
 
 ### Pro (Professional) Version
 
 - All Free features
+- Automated agent synchronization with centralized backend
 - Advanced PDF reports
 - Traffic analysis per device
 - Alerts & notifications
-- Account and network management
+- Account and multi-network management
+- Designed for companies and enterprise use
 
 ---
 
 ## Architecture
 
 - **Desktop & Mobile:** PySide6 / QML interfaces
-- **Agents:** Scan networks and send data to backend (Pro only)
-- **Backend:** Centralized, controlled by NetVixil team
+- **Agents:** Scan networks and send data to backend (Free users can configure local agents; Pro users can synchronize with backend)
+- **Backend:** Centralized and managed only by NetVixil team; all accounts and data are controlled centrally
 
 ---
 
@@ -55,19 +58,23 @@ python main.py
 
 ### Mobile App
 
-    Open mobile/main.qml with Qt Creator or QML runtime
+Open mobile/main.qml with Qt Creator or QML runtime
 
-### Agent
+### Agent (Free & Pro)
 
 python agent_service.py
 
     Configure AGENT_ID, TOKEN, API_URL in config.json
 
+    Free users: agents run locally and link to their account
+
+    Pro users: agents can synchronize with backend for advanced reporting and automation
+
     Run as a service for automatic monitoring
 
 Contributing
 
-    Free version is open source (desktop and agents only)
+    Free version (desktop, mobile, and agents) is open source and contributions are welcome
 
     Backend and Pro features are proprietary and managed centrally
 
