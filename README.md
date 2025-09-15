@@ -19,11 +19,11 @@
 - Detailed info: open ports, active services, OS
 - Real-time alerts for new devices or disconnections
 - Network mapping and logs
+- Automated remote monitoring agents (RPi/PC)
 
 ### Pro (Professional) Version
 
 - All Free features
-- Automated remote monitoring agents (RPi/PC)
 - Advanced PDF reports
 - Traffic analysis per device
 - Alerts & notifications
@@ -32,20 +32,6 @@
 ---
 
 ## Architecture
-
-/NetVixil
-│
-├── core/ # Backend and shared logic (not public)
-│ ├── backend/ # Django backend (centralized)
-│ └── shared/ # Utilities and modules
-│
-├── pro/ # Pro version scripts and desktop app
-│ ├── agent/ # Monitoring agents
-│ └── desktop/ # Desktop frontend (PySide/PyQt + QML)
-│
-├── mobile/ # Mobile frontend (QML)
-├── README.md
-└── .gitignore
 
 - **Desktop & Mobile:** PySide6 / QML interfaces
 - **Agents:** Scan networks and send data to backend (Pro only)
@@ -66,20 +52,17 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 python main.py
 
-Mobile App
+### Mobile App
 
     Open mobile/main.qml with Qt Creator or QML runtime
 
-Agent (Pro)
+### Agent
 
 python agent_service.py
 
     Configure AGENT_ID, TOKEN, API_URL in config.json
 
     Run as a service for automatic monitoring
-
-Screenshots
-
 
 
 Contributing
